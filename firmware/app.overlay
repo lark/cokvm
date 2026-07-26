@@ -1,0 +1,17 @@
+/ {
+    hid_kbd: hid_kbd {
+        compatible = "zephyr,hid-device";
+        protocol-code = "keyboard";
+        label = "USB Composite Keyboard";
+        in-report-size = <8>;
+        in-polling-period-us = <10000>;
+    };
+
+    hid_mouse: hid_mouse {
+        compatible = "zephyr,hid-device";
+        protocol-code = "mouse";
+        label = "USB Composite Mouse";
+        in-report-size = <6>;
+        in-polling-period-us = <1000>;
+    };
+};

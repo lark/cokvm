@@ -1,0 +1,21 @@
+menu "CoKVM Configuration"
+
+config COKVM_PASSKEY_PAIRING
+	bool "Enable Passkey Entry pairing (more secure)"
+	default n
+	select BT_SMP_ENFORCE_MITM
+	help
+	  When enabled, uses Passkey Entry (6-digit code) for Bluetooth pairing
+	  instead of Just Works. The passkey will be displayed on the shell
+	  console during pairing. This provides MITM protection.
+
+config COKVM_TESTSUITE
+	bool "Enable test suite for BLE data injection"
+	default n
+	help
+	  When enabled, adds 'cokvm test' commands for simulating keyboard
+	  and mouse input. This is for development testing purposes.
+
+endmenu
+
+source "Kconfig.zephyr"
