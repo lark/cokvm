@@ -1,0 +1,2 @@
+"NSBluetoothAlwaysUsageDescription" = "CoKVM needs Bluetooth access to connect to the KVM dongle.";
+"NSCameraUsageDescription" = "CoKVM needs camera access to capture video.";

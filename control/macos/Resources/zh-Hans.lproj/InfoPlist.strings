@@ -1,0 +1,2 @@
+"NSBluetoothAlwaysUsageDescription" = "CoKVM 需要蓝牙权限来连接 KVM 控制器。";
+"NSCameraUsageDescription" = "CoKVM 需要摄像头权限来捕获视频。";
