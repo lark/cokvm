@@ -1,0 +1,19 @@
+<UserControl x:Class="CoKVM.UI.Controls.VideoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:CoKVM.UI.Controls"
+             xmlns:media="using:Microsoft.UI.Xaml.Controls"
+             Background="Black">
+
+    <Grid>
+        <!-- GPU-accelerated video preview via MediaPlayerElement (Media Foundation). -->
+        <media:MediaPlayerElement x:Name="PreviewPlayer" Stretch="Uniform"
+                                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                  AutoPlay="True"/>
+
+        <!-- Combo key popup (shown on Ctrl+RightClick). -->
+        <Popup x:Name="ComboPopup" IsLightDismissEnabled="True">
+            <local:ComboKeyPanel x:Name="ComboPanel"/>
+        </Popup>
+    </Grid>
+</UserControl>

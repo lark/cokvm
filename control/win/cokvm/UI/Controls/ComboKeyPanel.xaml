@@ -1,0 +1,77 @@
+<UserControl x:Class="CoKVM.UI.Controls.ComboKeyPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}"
+             BorderBrush="{ThemeResource SystemControlForegroundChromeMediumBrush}"
+             BorderThickness="1"
+             Padding="8">
+
+    <UserControl.Resources>
+        <Style x:Key="ComboButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="52"/>
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+        <Style x:Key="ComboWideButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Padding" Value="8,0"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Row 0: F1-F6 -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="4">
+            <Button Content="F1"  Tag="f1"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="F2"  Tag="f2"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="F3"  Tag="f3"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="F4"  Tag="f4"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="F5"  Tag="f5"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="F6"  Tag="f6"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+        </StackPanel>
+
+        <!-- Row 1: F7-F12 -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="4" Margin="0,4,0,0">
+            <Button Content="F7"  Tag="f7"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="F8"  Tag="f8"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="F9"  Tag="f9"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="F10" Tag="f10" Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="F11" Tag="f11" Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="F12" Tag="f12" Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+        </StackPanel>
+
+        <!-- Row 2: Esc, Tab, Del, Ins, Home, End -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Spacing="4" Margin="0,4,0,0">
+            <Button Content="Esc"  Tag="esc"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="Tab"  Tag="tab"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="Del"  Tag="del"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="Ins"  Tag="ins"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="Home" Tag="home" Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="End"  Tag="end"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+        </StackPanel>
+
+        <!-- Row 3: PgUp, PgDn, PrtSc, ScrLk, Pause, Space -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Spacing="4" Margin="0,4,0,0">
+            <Button Content="PgUp"  Tag="pgup"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="PgDn"  Tag="pgdn"  Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="PrtSc" Tag="prtsc" Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="ScrLk" Tag="scrlk" Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="Pause" Tag="pause" Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="Space" Tag="space" Style="{StaticResource ComboButtonStyle}" Click="OnKeyClick"/>
+        </StackPanel>
+
+        <!-- Row 4: wide combo buttons -->
+        <StackPanel Grid.Row="4" Orientation="Horizontal" Spacing="4" Margin="0,4,0,0">
+            <Button Content="Ctrl+Alt+Del"     Tag="ctrl+alt+del"     Style="{StaticResource ComboWideButtonStyle}" Click="OnKeyClick"/>
+            <Button Content="Ctrl+Shift+Esc"   Tag="ctrl+shift+esc"   Style="{StaticResource ComboWideButtonStyle}" Click="OnKeyClick"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

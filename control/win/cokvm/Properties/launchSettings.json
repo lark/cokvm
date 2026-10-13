@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CoKVM": {
+      "commandName": "MsixPackage"
+    },
+    "CoKVM (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
